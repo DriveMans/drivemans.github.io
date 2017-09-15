@@ -168,7 +168,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/15/swift-01/">swift-01</a>
+      <a class="article-title" href="/2017/09/15/swift-01/">Swift - 常量/遍历/数组/字典</a>
     </h1>
   
 
@@ -181,7 +181,103 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#哈哈</p>
+        <p>###常量和变量</p>
+<pre>
+常量 ：let max = 10
+
+变量声明    var 变量名 : 类型
+变量字面量    var index = 4
+初始化        var index:NSInteger!
+</pre>
+
+<hr>
+<p>###数组</p>
+<pre>
+var someInts = [Int]()
+var someInts[1,2,3]
+
+增
+
+someInts.append(1)
+someInts.append(2)
+someInts.append(3)
+
+取：
+
+let a = someInts[0]    //a = 1
+let b = someInts[1]        //b = 2
+let c = someInts[2]        //c = 3
+
+插
+
+someInts.insert(4, at: 0)
+someInts.insert(5, at: 0)    //someInts = [5,4,1,2,3]
+
+删
+
+someInts.remove(at: 0)
+</pre>
+
+<hr>
+<p>###字典</p>
+<pre>
+var namesOfIntegers = [String: String]()
+//字面量 var namesOfIntegers = ["a":"1","b":"2","c":"3"]
+
+增
+
+namesOfIntegers["one"] = "1"
+namesOfIntegers["two"] = "2"
+namesOfIntegers["three"] = "3"
+
+删
+
+namesOfIntegers["one"] = nil
+
+改
+
+namesOfIntegers["one"] = "hello"
+
+取
+
+let one = nameOfIntegers["one"]
+</pre>
+
+<hr>
+<p>###for循环</p>
+<p>遍历字典</p>
+<pre>
+let names = ["Anna", "Alex", "Brian", "Jack"]
+for name in names {
+print("Hello, \(name)!")
+}
+// Hello, Anna!
+// Hello, Alex!
+// Hello, Brian!
+// Hello, Jack!
+</pre>
+
+<p>遍历数组</p>
+<pre>
+let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+for (animalName, legCount) in numberOfLegs {
+print("\(animalName)s have \(legCount) legs")
+}
+// ants have 6 legs
+// spiders have 8 legs
+// cats have 4 legs
+</pre>
+数字范围
+<pre>
+for index in 1...5 {
+print("\(index) times 5 is \(index * 5)")
+}
+// 1 times 5 is 5
+// 2 times 5 is 10
+// 3 times 5 is 15
+// 4 times 5 is 20
+// 5 times 5 is 25
+</pre>
 
       
 
